@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+if [[ ! $1 ]]; then
+    echo "Need filename" >&2
+    exit 1
+fi
+
+#a=$1
+#xpath=${a%/*}
+#xbase=${a##*/}
+#xfext=${xbase##*.}
+#xpref=${xbase%.*}
+#echo; echo "$xpath"; echo "$xpref"; echo "$xfext"
+#echo "Here is the filename: $dateFromFileName ----"
+
+base=${1##*/}
+date=${base%.*}
+
+while read -r line; do
+    #printf "%s\n" "$REPLY"
+    echo "$date,$line" >> output.csv
+done < "$1"

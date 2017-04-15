@@ -1,0 +1,10 @@
+#!/bin/bash
+
+declare -i i=0
+
+while true; do
+    echo "still here $((i++))"
+    sleep 2
+done
+
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+if [[ ! $1 ]]; then
+    echo "Need filename" >&2
+    exit 1
+fi
+
+DONE=false
+
+while $DONE ; do
+    read || DONE=true
+    echo $REPLY
+done

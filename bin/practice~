@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sum(){
+    echo  $(( $1 + $2))
+}
+
+starts_with_a(){
+    [[ $1 == [Aa]* ]];
+}
+
+#sum 4 5
+#echo $?
+
+if starts_with_a hello; then
+    echo "yep"
+else
+    echo "nope"
+fi
